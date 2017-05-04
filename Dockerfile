@@ -3,7 +3,6 @@ FROM ruby:2.4.1
 COPY Gemfile /Gemfile
 RUN bundle install
 
-EXPOSE 4568
+EXPOSE 4100
 
-CMD fake_sqs
-
+CMD fake_sqs -p 4100
