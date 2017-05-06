@@ -5,4 +5,4 @@ RUN bundle install
 
 EXPOSE 4100
 
-CMD fake_sqs -p 4100
+CMD ["fake_sqs", "-p", "4100", "--database", "/database.yml", "-o", "aws-sqs"]
